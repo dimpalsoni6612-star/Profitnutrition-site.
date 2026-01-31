@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ProFit Nutrition | Online Supplement Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: #fff;
+}
+header {
+    background: #000;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #e10600;
+}
+header img {
+    width: 160px;
+}
+.tagline {
+    background: linear-gradient(90deg, #e10600, #000);
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+section {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+h2 {
+    color: #e10600;
+    border-left: 5px solid #e10600;
+    padding-left: 10px;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+.product {
+    background: #141414;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #222;
+    text-align: center;
+}
+.product h3 {
+    font-size: 16px;
+}
+.price {
+    color: #00ff99;
+    font-weight: bold;
+    margin: 8px 0;
+}
+.product button {
+    background: #e10600;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.cart {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: #000;
+    padding: 15px;
+    border-left: 2px solid #e10600;
+    overflow-y: auto;
+}
+.cart h3 {
+    color: #e10600;
+}
+.cart-item {
+    font-size: 13px;
+    border-bottom: 1px solid #333;
+    padding: 6px 0;
+}
+.cart input, .cart textarea {
+    width: 100%;
+    margin: 6px 0;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+}
+.cart textarea {
+    resize: none;
+    height: 60px;
+}
+.cart button {
+    background: #25D366;
+    color: #000;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+footer {
+    background: #000;
+    text-align: center;
+    padding: 15px;
+    color: #aaa;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" alt="ProFit Nutrition">
+</header>
+
+<div class="tagline">
+Strength • Muscle • Recovery 🏋️ | Online Orders Available 🇮🇳 <br>
+📞 7876531414 , 9991542251
+</div>
+
+<section>
+<h2>Top Brands We Sell</h2>
+<div style="background:#111;padding:20px;border-radius:12px;text-align:center;">
+    <img src="brands.png" style="max-width:100%;border-radius:10px;">
+    <p style="color:#bbb;margin-top:10px;">
+        100% Genuine • Trusted Brands
+    </p>
+</div>
+</section>
+
+<section>
+<h2>Whey Protein</h2>
+<div class="products">
+<div class="product"><h3>Whey Protein 1kg</h3><div class="price">₹2,499</div><button onclick="addToCart('Whey Protein 1kg - ₹2499')">Add</button></div>
+<div class="product"><h3>Isolate Whey</h3><div class="price">₹3,499</div><button onclick="addToCart('Isolate Whey - ₹3499')">Add</button></div>
+</div>
+</section>
+
+<section>
+<h2>Mass Gainers</h2>
+<div class="products">
+<div class="product"><h3>Mass Gainer 3kg</h3><div class="price">₹3,199</div><button onclick="addToCart('Mass Gainer 3kg - ₹3199')">Add</button></div>
+</div>
+</section>
+
+<section>
+<h2>Creatine</h2>
+<div class="products">
+<div class="product"><h3>Creatine Monohydrate</h3><div class="price">₹999</div><button onclick="addToCart('Creatine - ₹999')">Add</button></div>
+</div>
+</section>
+
+<section>
+<h2>Pre-Workout</h2>
+<div class="products">
+<div class="product"><h3>Pre Workout</h3><div class="price">₹1,599</div><button onclick="addToCart('Pre Workout - ₹1599')">Add</button></div>
+</div>
+</section>
+
+<section>
+<h2>BCAA / Aminos</h2>
+<div class="products">
+<div class="product"><h3>BCAA 2:1:1</h3><div class="price">₹1,299</div><button onclick="addToCart('BCAA - ₹1299')">Add</button></div>
+</div>
+</section>
+
+<section>
+<h2>Vitamins & Fish Oil</h2>
+<div class="products">
+<div class="product"><h3>Multivitamins</h3><div class="price">₹699</div><button onclick="addToCart('Multivitamins - ₹699')">Add</button></div>
+<div class="product"><h3>Fish Oil</h3><div class="price">₹899</div><button onclick="addToCart('Fish Oil - ₹899')">Add</button></div>
+</div>
+</section>
+
+<section>
+<h2>Fat Burners</h2>
+<div class="products">
+<div class="product"><h3>Fat Burner</h3><div class="price">₹1,499</div><button onclick="addToCart('Fat Burner - ₹1499')">Add</button></div>
+</div>
+</section>
+
+<section>
+<h2>Accessories</h2>
+<div class="products">
+<div class="product"><h3>Shaker Bottle</h3><div class="price">₹299</div><button onclick="addToCart('Shaker - ₹299')">Add</button></div>
+<div class="product"><h3>Gym Gloves</h3><div class="price">₹499</div><button onclick="addToCart('Gloves - ₹499')">Add</button></div>
+<div class="product"><h3>Lifting Belt</h3><div class="price">₹1,299</div><button onclick="addToCart('Belt - ₹1299')">Add</button></div>
+</div>
+</section>
+
+<!-- ORDER FORM -->
+<div class="cart">
+<h3>Place Your Order</h3>
+<form onsubmit="sendOrder(event)">
+<input id="name" placeholder="Full Name" required>
+<textarea id="address" placeholder="Full Address" required></textarea>
+<input id="pincode" placeholder="Pincode" required>
+<h4 style="color:#e10600;">Your Cart</h4>
+<div id="cartItems"></div>
+<button type="submit">Order via WhatsApp</button>
+</form>
+</div>
+
+<footer>
+© 2026 ProFit Nutrition | Fuel Your Strength
+</footer>
+
+<script>
+let cart=[];
+function addToCart(item){cart.push(item);renderCart();}
+function renderCart(){
+let div=document.getElementById("cartItems");
+div.innerHTML="";
+cart.forEach((i,x)=>div.innerHTML+=`<div class="cart-item">${x+1}. ${i}</div>`);
+}
+function sendOrder(e){
+e.preventDefault();
+let msg=`Hello ProFit Nutrition,%0A%0AName: ${name.value}%0AAddress: ${address.value}%0APincode: ${pincode.value}%0A%0AOrder:%0A`;
+cart.forEach(i=>msg+=`- ${i}%0A`);
+window.open(`https://wa.me/917876531414?text=${msg}`,"_blank");
+}
+</script>
+
+</body>
+</html>
